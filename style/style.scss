@@ -1,5 +1,9 @@
 @import "../bootstrap/bootstrap-grid";
 @import "../fonts/stylesheet";
-@import "defaults";
-@import "home_sect";
-@import "works_sect";
+@import "partials/common";
+@import "partials/header";
+@import "partials/sidebar";
+@import "partials/home_sect";
+@import "partials/works_sect";
+@import "partials/about_sect";
+@import "partials/contact_sect";
