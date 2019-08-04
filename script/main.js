@@ -1,10 +1,11 @@
 $(function () {
     $(document).ready(function () {
+        // #region MAIN
         checkWindowLocation();
 
         var myFullpage = new fullpage('#fullpage', {
             anchors: ['home', 'works', 'about', 'contact', 'hire'],
-            menu: '#menu',
+            menu: '.navmenu',
             lazyLoad: true,
             responsiveWidth: 767,
             responsiveHeight: 450
@@ -37,6 +38,24 @@ $(function () {
             }
         }
 
+        // $(document).on("click", "#header_menu li a", function (e) {
+        //     // e.preventDefault();
+        //     var parent = $(this).parent();
+        //     var target = $(this).attr("href").split("#")[1];
+        //     var section = $("#fullpage").find("." + target);
+
+        //     $("#header menu li").not(parent).removeClass("active");
+        //     parent.addClass("active");
+
+        //     $("html, body").animate({
+        //         scrollTop: section.offset().top + 90
+        //     }, 500);
+
+        //     $("#header_menu, #open_header, #toggleMenu").removeClass("active");
+        // });
+
+        // #endregion
+
         // #region WORKS SECTION
         $(".section.works .owl-carousel").owlCarousel({
             items: 1,
@@ -53,13 +72,25 @@ $(function () {
         // #endregion
 
         // #region ABOUT SECTION
-            $(".section.about .shapes span").each(function(){
-                $(this).css({
-                    'left': Math.floor((Math.random() * 100) + 1) + '%',
-                    'top': Math.floor((Math.random() * 100) + 1) + '%',
-                    'transform': 'rotate(' + Math.floor((Math.random() * 180) + 1) + 'deg)'
-                });
+        $(".section.about .shapes span").each(function () {
+            $(this).css({
+                'left': Math.floor((Math.random() * 100) + 1) + '%',
+                'top': Math.floor((Math.random() * 100) + 1) + '%',
+                'transform': 'rotate(' + Math.floor((Math.random() * 180) + 1) + 'deg)'
             });
+        });
+        // #endregion
+
+        // #region HIRE US SECTION
+        $(".section.hire .inputBox input").each(function () {
+            $(this).on("change", function () {
+                if ($(this).val()) {
+                    $(this).addClass("full");
+                } else {
+                    $(this).removeClass("full");
+                }
+            });
+        });
         // #endregion
     });
 })

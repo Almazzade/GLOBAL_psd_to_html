@@ -58,6 +58,7 @@ li{
 
     .section_inner{
         padding-top: 45px;
+        transition: $tr;
     }
 
     @media (min-width: 768px){

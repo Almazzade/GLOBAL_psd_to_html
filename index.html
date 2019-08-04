@@ -36,12 +36,12 @@
 
     <!-- HEADER MENU -->
     <div id="header_menu">
-        <ul>
-            <li class="active"><a href="index.html#home">Home</a></li>
-            <li><a href="index.html#works">Works</a></li>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-            <li><a href="index.html#hire">Hire us</a></li>
+        <ul class="navmenu">
+            <li data-menuanchor="home" class="active"><a href="#home">Home</a></li>
+            <li data-menuanchor="work"><a href="#works">Works</a></li>
+            <li data-menuanchor="about"><a href="#about">About</a></li>
+            <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
+            <li data-menuanchor="hire"><a href="#hire">Hire us</a></li>
         </ul>
     </div>
     <!-- HEADER MENU END -->
@@ -53,7 +53,7 @@
             <!-- LEFT NAVIGATION -->
             <nav id="menuHolder">
                 <!-- <div class="container"> -->
-                <ul id="menu">
+                <ul id="menu" class="navmenu">
                     <li data-menuanchor="home" class="active">
                         <span>01</span>
                         <a href="#home">Home</a>
@@ -301,6 +301,84 @@
                     </div>
                 </section>
                 <!-- CONTACT SECTION END -->
+
+                <!-- HIRE US SECTION -->
+                <section class="section fp-auto-height-responsive hire">
+                    <div class="section_inner">
+                        <h4>You want us to do</h4>
+
+                        <form action="">
+                            <div class="checkboxHolder">
+                                <div class="checkBox">
+                                    <input type="checkbox" name="todo" id="appdesign">
+                                    <label for="appdesign">
+                                        <span>App Design</span>
+                                    </label>
+                                </div>
+
+                                <div class="checkBox">
+                                    <input type="checkbox" name="todo" id="graphicdesign">
+                                    <label for="graphicdesign">
+                                        <span>Graphic Design</span>
+                                    </label>
+                                </div>
+
+                                <div class="checkBox">
+                                    <input type="checkbox" name="todo" id="motiondesign">
+                                    <label for="motiondesign">
+                                        <span>Motion Design</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="checkboxHolder">
+                                <div class="checkBox">
+                                    <input type="checkbox" name="todo" id="uxdesign">
+                                    <label for="uxdesign">
+                                        <span>UX Design</span>
+                                    </label>
+                                </div>
+
+                                <div class="checkBox">
+                                    <input checked type="checkbox" name="todo" id="webdesign">
+                                    <label for="webdesign">
+                                        <span>Webdesign</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="checkboxHolder">
+                                <div class="checkBox">
+                                    <input type="checkbox" name="todo" id="marketing">
+                                    <label for="marketing">
+                                        <span>Marketing</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="textInputHolder">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="inputBox">
+                                            <input autocomplete="off" type="text" id="name">
+                                            <label for="name">Name</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="inputBox">
+                                            <input autocomplete="off" type="email" id="email">
+                                            <label for="email">Email</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit">send request</button>
+                        </form>
+                    </div>
+                </section>
+                <!-- HIRE US SECTION END -->
             </main>
             <!-- MAIN END -->
         </section>
