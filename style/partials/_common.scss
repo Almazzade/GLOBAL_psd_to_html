@@ -59,6 +59,9 @@ li{
     .section_inner{
         padding-top: 45px;
         transition: $tr;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     @media (min-width: 768px){
